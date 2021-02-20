@@ -52,16 +52,21 @@ body {
 <p>Resize the browser window to see the effect.</p>
 
 <div class="row">
+
+  {% for alljob in alljob %}
+
   <div class="column">
     <div class="card">
       <h3>Card 1</h3>
-      <p>Some text</p>
+      <h5 class="card-title">{{ alljob.jobtitle }}</h5>
       <p>Some text</p>
     </div>
   </div>
+  
 
+  {% endfor %}
+ 
 </div>
 
 </body>
 </html>
-
