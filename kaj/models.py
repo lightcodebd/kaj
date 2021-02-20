@@ -41,7 +41,7 @@ class JOB(models.Model):
     updated_on = models.DateTimeField(auto_now= True)
     jobdescription = models.TextField()
     joblocation = models.ForeignKey(JOBLOCATION, on_delete= models.CASCADE,related_name='joblocation')
-    education_qualification=models.ForeignKey(Education_Qualification, on_delete= models.CASCADE,related_name='joblocation')
+    education_qualification = models.ForeignKey(Education_Qualification, on_delete= models.CASCADE,related_name='joblocation')
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     types = models.IntegerField(choices=TYPES, default=4) 

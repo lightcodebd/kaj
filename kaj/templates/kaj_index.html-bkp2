@@ -1,0 +1,45 @@
+{% extends "base.html" %} 
+{% block content %}
+<style>
+    body {
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        background-color: #fdfdfd;
+    }
+    
+    .head_text {
+        color: white;
+    }
+    
+    .card {
+        box-shadow: 0 16px 48px #E3E7EB;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-md-8 mt-3 left">
+            {% for alljob in alljob %}
+            <div class="card mb-4">
+                <div class="card-body">
+		<h5 class="card-title">{{ alljob.jobtitle }}</h5>
+                <p class="card-text">{{ alljob.jobdescription }}</p>
+                <p class="card-text">{{ alljob.jobpublished }}</p>
+                <p class="card-text">{{ alljob.apply_start }}</p>
+                <p class="card-text">{{ alljob.apply_last_date }}</p>
+                <p class="card-text">{{ alljob.updated_on }}</p>
+                <p class="card-text">{{ alljob.jobdescription }}</p>
+                <p class="card-text">{{ alljob.joblocation }}</p>
+                <p class="card-text">{{ alljob.education_qualification }}</p>
+                <p class="card-text">{{ alljob.created_on }}</p>
+                <p class="card-text">{{ alljob.status }}</p>
+                <p class="card-text">{{ alljob.source_link }}</p>
+                <p class="card-text">{{ alljob.author }}</p>
+
+		</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{%endblock%}

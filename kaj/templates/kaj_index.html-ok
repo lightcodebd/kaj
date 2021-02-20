@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  border-radius: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+.card-body {
+  text-align: center;
+}
+
+</style>
+
+<header class="masthead">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class=" col-md-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h3 class=" site-heading my-4 mt-3 text-white"> ceph </h3>
+                    <p class="text-light"> ceph &nbsp
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+<h1>w</h1>
+
+
+<div class="container">
+    <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-md-8 mt-3 left">
+            {% for alljob in alljob %}
+            <div class="card mb-4">
+                <div class="card-body">
+                <h5 class="card-title">{{ alljob.jobtitle }}</h5>
+                <p class="card-text">{{ alljob.jobdescription }}</p>
+                <p class="card-text">{{ alljob.jobpublished }}</p>
+                <p class="card-text">{{ alljob.apply_start }}</p>
+                <p class="card-text">{{ alljob.apply_last_date }}</p>
+                <p class="card-text">{{ alljob.updated_on }}</p>
+                <p class="card-text">{{ alljob.jobdescription }}</p>
+                <p class="card-text">{{ alljob.joblocation }}</p>
+                <p class="card-text">{{ alljob.education_qualification }}</p>
+                <p class="card-text">{{ alljob.created_on }}</p>
+                <p class="card-text">{{ alljob.status }}</p>
+                <p class="card-text">{{ alljob.source_link }}</p>
+                <p class="card-text">{{ alljob.author }}</p>
+
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

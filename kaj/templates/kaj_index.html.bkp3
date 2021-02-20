@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+
+<h1>w</h1>
+
+<div class="row">
+{% for alljob in alljob %}
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <div class="card-body">
+                <h5 class="card-title">{{ alljob.jobtitle }}</h5>
+                <p class="card-text">{{ alljob.jobdescription }}</p>
+		<p class="card-text">{{ alljob.jobpublished }}</p>
+		<p class="card-text">{{ alljob.apply_start }}</p>
+		<p class="card-text">{{ alljob.apply_last_date }}</p>
+		<p class="card-text">{{ alljob.updated_on }}</p>
+		<p class="card-text">{{ alljob.jobdescription }}</p>
+		<p class="card-text">{{ alljob.joblocation }}</p>
+		<p class="card-text">{{ alljob.education_qualification }}</p>
+                <p class="card-text">{{ alljob.created_on }}</p>
+		<p class="card-text">{{ alljob.status }}</p>
+		<p class="card-text">{{ alljob.source_link }}</p>
+		<p class="card-text">{{ alljob.author }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
