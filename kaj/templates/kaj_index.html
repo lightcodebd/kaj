@@ -19,7 +19,8 @@ body {
 }
 
 /* Remove extra left and right margins, due to padding */
-.row {margin: 0 -5px;}
+.row {margin: 0 -5px;
+padding:20px;}
 
 /* Clear floats after the columns */
 .row:after {
@@ -40,9 +41,12 @@ body {
 /* Style the counter cards */
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  text-align: center;
+  /*text-align: center;*/
   background-color: #f1f1f1;
+}
+
+.card-title{
+  background-color: red;
 }
 </style>
 </head>
@@ -52,9 +56,7 @@ body {
 <p>Resize the browser window to see the effect.</p>
 
 <div class="row">
-
-  {% for alljob in alljob %}
-
+      {% for alljob in alljob %}
   <div class="column">
     <div class="card">
       <h3>Card</h3>
@@ -74,9 +76,7 @@ body {
        
     </div>
   </div>
-  
-
-  {% endfor %}
+     {% endfor %}
  
 </div>
 
