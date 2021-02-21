@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from kaj.models import JOB
+from kaj.models import JOB, Education_Qualification, JOBLOCATION
 # Create your views here.
 
 def kaj_index(request):
@@ -9,8 +9,8 @@ def kaj_index(request):
     }
     return render(request, 'kaj_index.html', context)
 
-def kaj_detail(request, pk):
-    kajdetail = JOB.objects.get(pk=pk)
+def kaj_detail(request, jobtitle):
+    kajdetail = JOB.objects.get(jobtitle=jobtitle)
     context = {
         'kajdetail': kajdetail
     }
