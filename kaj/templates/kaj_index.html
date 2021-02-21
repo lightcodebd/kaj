@@ -60,18 +60,17 @@ padding:20px;}
   <div class="column">
     <div class="card">
       <h3>Card</h3>
-      <h5 class="card-title">{{ alljob.jobtitle }}</h5>
-      <p class="card-text">{{ alljob.jobdescription }}</p>
-      <p class="card-text">{{ alljob.jobpublished }}</p>
-      <p class="card-text">{{ alljob.apply_start }}</p>
-      <p class="card-text">{{ alljob.apply_last_date }}</p>
-      <p class="card-text">{{ alljob.updated_on }}</p>
-      <p class="card-text">{{ alljob.jobdescription }}</p>
-      <p class="card-text">{{ alljob.joblocation }}</p>
-      <p class="card-text">{{ alljob.education_qualification }}</p>
+      <h5 class="card-title">Job Title : {{ alljob.jobtitle }}</h5>
+      <p class="card-text">Job Description:: {{ alljob.jobdescription }}</p>
+      <p class="card-text">Job published: {{ alljob.jobpublished }}</p>
+      <p class="card-text">Apply Start : {{ alljob.apply_start }}</p>
+      <p class="card-text">Application Last Date :: {{ alljob.apply_last_date }}</p>
+      <p class="card-text">Updated : {{ alljob.updated_on }}</p>
+      <p class="card-text">Joblocation : {{ alljob.joblocation }}</p>
+      <p class="card-text">Education Qualification : {{ alljob.education_qualification }}</p>
       <p class="card-text">{{ alljob.created_on }}</p>
       <p class="card-text">{{ alljob.status }}</p>
-      <p class="card-text">{{ alljob.source_link }}</p>
+      <p class="card-text">Source Link : {{ alljob.source_link }}</p>
       <p class="card-text">{{ alljob.author }}</p>
       
                 <a href="{% url 'kaj_detail' alljob.education_qualification %}"
