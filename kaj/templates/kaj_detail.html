@@ -2,12 +2,19 @@
 {% load static %}
 
 {% block page_content %}
-<h1>{{ kajdetail.jobtitle }}</h1>
+
 <div class="row">
+    {% for kajdetail in kajdetail %}
     <div class="col-md-4">
         <h5>About the project:</h5>
         <br>
         <h5>Technology used:</h5>
+
+        <p class="card-text">{{ kajdetail.jobdescription }}</p>
+      <p class="card-text">{{ kajdetail.jobpublished }}</p>
     </div>
+    {% endfor %}
+    
 </div>
+
 {% endblock %}

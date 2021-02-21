@@ -9,8 +9,10 @@ def kaj_index(request):
     }
     return render(request, 'kaj_index.html', context)
 
-def kaj_detail(request, jobtitle):
-    kajdetail = JOB.objects.get(jobtitle=jobtitle)
+def kaj_detail(request, education_qualification):
+#    kajdetail = JOB.objects.get(jobtitle=jobtitle)
+    find = Education_Qualification.objects.get(examname=education_qualification)
+    kajdetail = JOB.objects.filter(education_qualification=find.pk)
     context = {
         'kajdetail': kajdetail
     }
