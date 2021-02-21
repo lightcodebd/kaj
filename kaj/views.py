@@ -10,7 +10,7 @@ def kaj_index(request):
     return render(request, 'kaj_index.html', context)
 
 def kaj_detail(request, pk):
-    kajdetail = JOB.objects.get(title=pk)
+    kajdetail = JOB.objects.get(pk=pk)
     context = {
         'kajdetail': kajdetail
     }

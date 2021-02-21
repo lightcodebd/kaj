@@ -73,7 +73,14 @@ padding:20px;}
       <p class="card-text">{{ alljob.status }}</p>
       <p class="card-text">{{ alljob.source_link }}</p>
       <p class="card-text">{{ alljob.author }}</p>
-       
+      
+                <a href="{% url 'kaj_detail' alljob.pk %}"
+
+                   class="btn btn-primary">
+
+                    Read More
+
+                </a>       
     </div>
   </div>
      {% endfor %}
