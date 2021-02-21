@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+
+<div class="row">
+  {% for kajqualification in kajqualification %}
+    <div class="col-md-4">
+        <h5>About the project:</h5>
+        <br>
+        <h5>Technology used:</h5>
+
+        <p class="card-text"> Job description :: {{ kajqualification.jobdescription }}</p>
+      <p class="card-text">Job published date :: {{ kajqualification.jobpublished }}</p>
+    </div>
+
+  {% endfor %}
+
+    
+</div>
+
+{% endblock %}

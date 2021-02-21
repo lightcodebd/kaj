@@ -51,12 +51,20 @@ padding:20px;}
 </style>
 </head>
 <body>
+  <h3>Qualificatin</h3
+  {% for qualification in alljob %} 
+<a href="{% url 'kaj_findbyqualification' qualification.education_qualification %}"
 
-<h2>Responsive Column Cards</h2>
-<p>Resize the browser window to see the effect.</p>
+             class="btn btn-primary">
+
+            {{ qualification.education_qualification }} 
+
+          </a> 
+  {% endfor %}
 
 <div class="row">
       {% for alljob in alljob %}
+
   <div class="column">
     <div class="card">
       <h3>Card</h3>
@@ -73,7 +81,7 @@ padding:20px;}
       <p class="card-text">Source Link : {{ alljob.source_link }}</p>
       <p class="card-text">{{ alljob.author }}</p>
       
-                <a href="{% url 'kaj_detail' alljob.education_qualification %}"
+                <a href="{% url 'kaj_detail' alljob.pk %}"
 
                    class="btn btn-primary">
 

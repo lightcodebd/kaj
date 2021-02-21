@@ -6,7 +6,7 @@ from . import views
 urlpatterns = [
 
     path("", views.kaj_index, name="kaj_index"),
-    path("<education_qualification>/", views.kaj_detail, name="kaj_detail"),
-#    path("<pk>/", views.project_detail, name="project_detail"),
+    path("<education_qualification>/", views.kaj_findbyqualification, name="kaj_findbyqualification"),
+    path("<int:pk>/", views.kaj_detail, name="kaj_detail"),
 
 ]

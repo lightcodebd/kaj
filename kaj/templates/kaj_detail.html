@@ -4,16 +4,13 @@
 {% block page_content %}
 
 <div class="row">
-    {% for kajdetail in kajdetail %}
     <div class="col-md-4">
-        <h5>About the project:</h5>
+        <h5>Deatil Job</h5>
         <br>
-        <h5>Technology used:</h5>
-
         <p class="card-text"> Job description :: {{ kajdetail.jobdescription }}</p>
       <p class="card-text">Job published date :: {{ kajdetail.jobpublished }}</p>
     </div>
-    {% endfor %}
+  
     
 </div>
 
